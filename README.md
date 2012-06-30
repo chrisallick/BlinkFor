@@ -1,7 +1,7 @@
 BlinkFor
 ========
 
-Stream Twitter with Python and blink an LED with PyMCU when a term in mentioned! The code I'm talking about during my http://sparkin60.com/ interview: http://vimeo.com/44761015
+Stream Twitter with Python and blink an LED with PyMCU when a particular word is mentioned! The code I'm talking about during my http://sparkin60.com/ interview: http://vimeo.com/44761015
 
 I've removed my credentials from the init function in the Streaming class.  Credentials can be obtained at: https://dev.twitter.com/
 
