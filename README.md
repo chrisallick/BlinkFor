@@ -14,7 +14,9 @@ First you'll need the FTDI drivers if you want to use the pyMCU: http://www.ftdi
 Then (from here: http://www.pymcu.com/Installation.html#OsxInstall ):
 
 $>sudo easy_install pyserial
+
 $>sudo easy_install pymcu
+
 $>python blinkfor.py tacos
 
 Any microcontroller can be used.  Just modify the function "on_status."
