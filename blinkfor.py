@@ -8,8 +8,8 @@ import pymcu
 class StreamListener( tweepy.StreamListener ):
 
     def __init__( self ):
-        self.auth1 = tweepy.auth.OAuthHandler('','')
-        self.auth1.set_access_token('','')
+        self.auth1 = tweepy.auth.OAuthHandler('Consumer key','Consumer secret')
+        self.auth1.set_access_token('Access token','Access token secret')
         self.api = tweepy.API(self.auth1)
 
         self.board = pymcu.mcuModule()
