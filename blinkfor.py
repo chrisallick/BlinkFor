@@ -6,6 +6,10 @@ import sys
 import pymcu
 import config
 
+# I have a a file called config.py which has the 4 variables required for twitter in my git ignore
+# I have a 5v buzzer from the arduino starter kit on digital pin 5 with no resistor :)
+# I have an rgb led common ground on pins pwm: 1,2 and 3
+
 class StreamListener( tweepy.StreamListener ):
 
     def __init__( self ):
