@@ -24,10 +24,22 @@ class StreamListener( tweepy.StreamListener ):
 
         for i in range(0, 255):
             self.board.pwmDuty( 1, i )
+        self.board.freqOut(5,100,1319)
+        self.board.freqOut(5,100,2093)
+        self.board.freqOut(5,100,1047)
+        self.board.freqOut(5,100,1319)
+        self.board.freqOut(5,100,2093)
+        self.board.freqOut(5,100,1047)
         for i in range(0, 255):
             self.board.pwmDuty( 1, 255-i )
 
+    def exiting( self ):
+        self.board.pwmDuty( 1, 0 )
+
+l = StreamListener()
+
 def signal_handler(signal, frame):
+        l.exiting()
         print 'Exiting...'
         sys.exit(0)
 signal.signal(signal.SIGINT, signal_handler)
@@ -37,6 +49,5 @@ if len(sys.argv) > 1:
 else:
     term = "tacos"
 
-l = StreamListener()
 streamer = tweepy.Stream( auth=l.auth1, listener=l, timeout=3000000000 )
 streamer.filter( follow=None, track=[term], async=False )
