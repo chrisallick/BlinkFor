@@ -21,5 +21,13 @@ $>python blinkfor.py tacos
 
 Any microcontroller can be used.  Just modify the function "on_status."
 
+I added a new file arduino/pyserial.ino
+
+Tested with python 2.7 on OS X 10.8
+
+It doesn't do much, just sits in a loop waiting for serial commands.
+If you add this to your arduino (I used an Uno), you should be good to go.
+Modify the Arduino sketch for more flexibility or a generalized platform for prototyping with Python and Arduino via a serial cable.
+
 Thanks,
 http://chrisallick.com
